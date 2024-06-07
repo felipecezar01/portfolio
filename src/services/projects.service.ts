@@ -8,35 +8,35 @@ class ProjectsService {
         {
           id: 1,
           attributes: {
-            name: "Project Alpha",
-            description: "A detailed description of Project Alpha.",
+            name: 'Project Alpha',
+            description: 'A detailed description of Project Alpha.',
             picture: {
               data: {
                 id: 1,
                 attributes: {
-                  name: "alpha.jpg",
-                  url: "/images/alpha.jpg"
+                  name: 'alpha.jpg',
+                  url: '/images/alpha.jpg'
                 }
               }
             },
-            url: "http://example.com/project/alpha"
+            url: 'http://example.com/project/alpha'
           }
         },
         {
           id: 2,
           attributes: {
-            name: "Project Beta",
-            description: "A detailed description of Project Beta.",
+            name: 'Project Beta',
+            description: 'A detailed description of Project Beta.',
             picture: {
               data: {
                 id: 2,
                 attributes: {
-                  name: "beta.jpg",
-                  url: "/images/beta.jpg"
+                  name: 'beta.jpg',
+                  url: '/images/beta.jpg'
                 }
               }
             },
-            url: "http://example.com/project/beta"
+            url: 'http://example.com/project/beta'
           }
         }
       ]

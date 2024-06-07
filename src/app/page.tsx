@@ -8,8 +8,8 @@ const staticProjectData = [
   {
     id: '1',
     attributes: {
-      name: "Zombie Game",
-      description: "A thrilling zombie survival game built with Unity. Click to play!",
+      name: 'Zombie Game',
+      description: 'A thrilling zombie survival game built with Unity. Click to play!',
       picture: {
         data: {
           id: 1,
@@ -19,7 +19,7 @@ const staticProjectData = [
           }
         }
       },
-      url: "https://simmer.io/@felipecezar/apocalipse-zumbi"
+      url: 'https://simmer.io/@felipecezar/apocalipse-zumbi'
     }
   }
 ];

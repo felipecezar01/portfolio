@@ -6,8 +6,8 @@
 
 /* Definindo as variáveis CSS para as fontes */
 :root {
-    --display-font: 'Fira Code', monospace;
-    --body-font: 'Merriweather Sans', sans-serif;
+  --display-font: 'Fira Code', monospace;
+  --body-font: 'Merriweather Sans', sans-serif;
 }
 
 .scroll-bar {
@@ -73,11 +73,11 @@
 }
 
 .font-title {
-  font-family: var(--display-font), monospace;  /* Usando a mesma família de fontes do nome */
-  font-size: 16px;  /* Ajustando o tamanho conforme solicitado */
-  font-weight: 700;  /* Peso da fonte para título */
-  color: #ffffff;  /* Cor do texto */
-  line-height: 24px;  /* Altura da linha para legibilidade */
+  font-family: var(--display-font), monospace; /* Usando a mesma família de fontes do nome */
+  font-size: 16px; /* Ajustando o tamanho conforme solicitado */
+  font-weight: 700; /* Peso da fonte para título */
+  color: #ffffff; /* Cor do texto */
+  line-height: 24px; /* Altura da linha para legibilidade */
 }
 
 @tailwind utilities;

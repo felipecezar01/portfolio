@@ -7,21 +7,21 @@ class ProfileService {
       data: {
         id: 1,
         attributes: {
-          name: "John Doe",
-          role: "Software Engineer",
-          location: "San Francisco, CA",
-          biography: "John is a software engineer with over 10 years of experience...",
-          abilities: "JavaScript, TypeScript, React, Node",
+          name: 'John Doe',
+          role: 'Software Engineer',
+          location: 'San Francisco, CA',
+          biography: 'John is a software engineer with over 10 years of experience...',
+          abilities: 'JavaScript, TypeScript, React, Node',
           social: {
-            LinkedIn: "https://linkedin.com/in/johndoe",
-            GitHub: "https://github.com/johndoe"
+            LinkedIn: 'https://linkedin.com/in/johndoe',
+            GitHub: 'https://github.com/johndoe'
           },
           picture: {
             data: {
               id: 1,
               attributes: {
-                name: "profile.jpg",
-                url: "/images/profile.jpg"
+                name: 'profile.jpg',
+                url: '/images/profile.jpg'
               }
             }
           }

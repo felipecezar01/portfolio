@@ -15,12 +15,14 @@ const staticProfileData = {
     name: 'Felipe Cezar',
     role: 'Software Developer',
     location: 'Ceará, Brasil',
-    biography: "Information Systems student interested in artificial intelligence, specialized in data analysis with Python and web development with JavaScript.",
-    abilities: "JavaScript, React, Next.js, Python, Flask, Django, Node.js, Nest.js, HTML, CSS, SASS, Tailwind, TypeScript, Figma",
+    biography:
+      'Information Systems student interested in artificial intelligence, specialized in data analysis with Python and web development with JavaScript.',
+    abilities:
+      'JavaScript, React, Next.js, Python, Flask, Django, Node.js, Nest.js, HTML, CSS, SASS, Tailwind, TypeScript, Figma',
     social: {
-      linkedin: "https://www.linkedin.com/in/felipecezarcruz/",
-      github: "https://github.com/felipecezar01",
-      xcom: "https://x.com/felipecezar01"
+      linkedin: 'https://www.linkedin.com/in/felipecezarcruz/',
+      github: 'https://github.com/felipecezar01',
+      xcom: 'https://x.com/felipecezar01'
     },
     picture: {
       data: {

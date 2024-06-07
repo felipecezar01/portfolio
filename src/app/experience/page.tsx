@@ -7,15 +7,15 @@ const staticExperienceData = [
   {
     id: '1',
     attributes: {
-      title: "Student Mentor",
-      description: "Taught and supported students as a course mentor, facilitating their academic success.",
-      company: "Unifametro",
-      from: new Date("2024-01-20"),
-      to: new Date("2024-12-20")
+      title: 'Student Mentor',
+      description:
+        'Taught and supported students as a course mentor, facilitating their academic success.',
+      company: 'Unifametro',
+      from: new Date('2024-01-20'),
+      to: new Date('2024-12-20')
     }
   }
 ];
-
 
 const ExperiencePage = () => {
   return (

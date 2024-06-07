@@ -1,9 +1,9 @@
-import React from 'react';  // Importando React para poder usar JSX
+import React from 'react'; // Importando React para poder usar JSX
 
 // Definindo as props que o componente irá aceitar
 type CertificateItemProps = {
   title: string;
-  imageUrl: string;  // Propriedade para a URL da imagem
+  imageUrl: string; // Propriedade para a URL da imagem
 };
 
 // Componente CertificateItem ajustado para aceitar e exibir um título e uma imagem

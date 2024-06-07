@@ -7,10 +7,11 @@ const staticArticles = [
   {
     id: 1,
     attributes: {
-      title: "Understanding All Types of Page Rendering in Next.js",
-      description: "Next.js is a powerful framework for React that facilitates the creation of modern web applications. One of its strengths is the flexibility in page rendering. In this article, we...",
-      picture: "/images/tips.png",
-      url: "https://dev.to/felipecezar01/understanding-all-types-of-page-rendering-in-nextjs-1fbi"
+      title: 'Understanding All Types of Page Rendering in Next.js',
+      description:
+        'Next.js is a powerful framework for React that facilitates the creation of modern web applications. One of its strengths is the flexibility in page rendering. In this article, we...',
+      picture: '/images/tips.png',
+      url: 'https://dev.to/felipecezar01/understanding-all-types-of-page-rendering-in-nextjs-1fbi'
     }
   }
 ];

@@ -18,7 +18,9 @@ const ExperienceItem = ({ data }: ExperienceItemProps) => {
         </p>
       </div>
       <div className="mt-2">
-        <h2 className="font-title"> {/* Aplicando a classe `font-title` */}
+        <h2 className="font-title">
+          {' '}
+          {/* Aplicando a classe `font-title` */}
           {attributes.title} @ {attributes.company}
         </h2>
         <p className="mt-1 font-body font-light text-greyish-800 lg:w-3/4">

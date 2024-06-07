@@ -9,15 +9,15 @@ class ArticlesService {
         {
           id: 1,
           attributes: {
-            title: "Article One",
-            url: "#",
-            description: "This is the first article",
+            title: 'Article One',
+            url: '#',
+            description: 'This is the first article',
             picture: {
               data: {
                 id: 1,
                 attributes: {
-                  name: "image1.jpg",
-                  url: "/path/to/image1.jpg"
+                  name: 'image1.jpg',
+                  url: '/path/to/image1.jpg'
                 }
               }
             }
@@ -26,15 +26,15 @@ class ArticlesService {
         {
           id: 2,
           attributes: {
-            title: "Article Two",
-            url: "#",
-            description: "This is the second article",
+            title: 'Article Two',
+            url: '#',
+            description: 'This is the second article',
             picture: {
               data: {
                 id: 2,
                 attributes: {
-                  name: "image2.jpg",
-                  url: "/path/to/image2.jpg"
+                  name: 'image2.jpg',
+                  url: '/path/to/image2.jpg'
                 }
               }
             }

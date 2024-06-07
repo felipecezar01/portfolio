@@ -8,7 +8,8 @@ type SocialMediaListProps = {
 };
 
 // Estilos padrões aplicados aos ícones
-const ICON_CLASSNAMES = 'h-5 w-5 text-white group-hover:text-primary-400 transition duration-300 ease-in';
+const ICON_CLASSNAMES =
+  'h-5 w-5 text-white group-hover:text-primary-400 transition duration-300 ease-in';
 
 // Mapeamento de ícones para identificadores conhecidos
 const SOCIAL_ICONS = {

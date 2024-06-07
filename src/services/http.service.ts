@@ -10,7 +10,7 @@ export class HttpService {
     private endpoint = '/',
     private headers: Record<string, string> = {
       'Content-Type': 'application/json',
-      Authorization: `Bearer ${AUTHORIZATION}`  // Certifique-se de que AUTHORIZATION está definida
+      Authorization: `Bearer ${AUTHORIZATION}` // Certifique-se de que AUTHORIZATION está definida
     }
   ) {}
 
