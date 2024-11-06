@@ -69,3 +69,31 @@
 ### `yarn.lock`
 - **Função**: Arquivo de lock do Yarn, que garante que todos os desenvolvedores e ambientes usem as mesmas versões das dependências.
 - **Exemplo de Conteúdo**: Especificações detalhadas das versões exatas das dependências e suas dependências internas, para garantir consistência no ambiente de desenvolvimento.
+
+# Estrutura do Diretório `src`
+
+## 1. `app`
+- **Descrição**: Contém as páginas e rotas principais da aplicação.
+- **Função**: Este é o diretório onde estão as páginas que compõem o aplicativo Next.js. Cada subpasta ou arquivo dentro de `app` representa uma rota na aplicação, por exemplo, `app/home` pode representar a rota `/home`.
+- **Observação**: Este diretório é a base para o roteamento de páginas no Next.js, e os arquivos `page.tsx` dentro de cada subpasta representam o conteúdo dessas rotas.
+
+## 2. `components`
+- **Descrição**: Armazena os componentes reutilizáveis da interface do usuário (UI).
+- **Função**: Os componentes dentro desta pasta são blocos de construção reutilizáveis que podem ser utilizados em várias partes da aplicação. Eles ajudam a criar uma UI consistente e modular, como botões, formulários, cabeçalhos, rodapés, etc.
+- **Observação**: Manter os componentes isolados facilita a manutenção e a reutilização de elementos de UI, melhorando a consistência visual do projeto.
+
+## 3. `interfaces`
+- **Descrição**: Contém definições de interfaces TypeScript utilizadas no projeto.
+- **Função**: As interfaces definem a estrutura e os tipos dos dados que o projeto utiliza, fornecendo segurança de tipo no TypeScript. Isso ajuda a garantir que os dados sejam passados corretamente entre os componentes, evitando erros comuns de tipagem.
+- **Observação**: Este diretório é essencial para o desenvolvimento com TypeScript, pois ajuda a manter a consistência dos dados em toda a aplicação.
+
+## 4. `styles`
+- **Descrição**: Contém os arquivos de estilo global e temas do projeto.
+- **Função**: Os arquivos aqui são responsáveis por definir estilos globais, configurações de tema, e quaisquer outras regras CSS que se aplicam em toda a aplicação. Isso inclui arquivos CSS, SCSS ou configurações específicas para frameworks de estilo como Tailwind CSS.
+- **Observação**: Centralizar os estilos globais e temas facilita a gestão de estilos em um único local, assegurando uma aparência consistente em todo o projeto.
+
+## 5. `utils`
+- **Descrição**: Armazena funções utilitárias e helpers.
+- **Função**: Contém funções auxiliares e utilitárias que podem ser reutilizadas em várias partes do código, como formatação de datas, manipulação de strings, ou qualquer outra funcionalidade que seja útil em diferentes contextos do projeto.
+- **Observação**: Manter funções utilitárias em `utils` ajuda a evitar duplicação de código e melhora a organização, pois concentra as funções genéricas e auxiliares em um único local.
+
