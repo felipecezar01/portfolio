@@ -97,3 +97,47 @@
 - **Função**: Contém funções auxiliares e utilitárias que podem ser reutilizadas em várias partes do código, como formatação de datas, manipulação de strings, ou qualquer outra funcionalidade que seja útil em diferentes contextos do projeto.
 - **Observação**: Manter funções utilitárias em `utils` ajuda a evitar duplicação de código e melhora a organização, pois concentra as funções genéricas e auxiliares em um único local.
 
+# Estrutura do Diretório `src/app`
+
+## Pastas e Arquivos
+
+### `articles`
+- **Descrição**: Pasta que representa a seção ou página de "Artigos" no projeto.
+- **Arquivos**:
+  - **`page.tsx`**: Arquivo que define o conteúdo e layout da página de artigos. Este arquivo serve como a entrada principal para a rota `/articles`, exibindo uma lista de artigos ou conteúdo relacionado a essa seção.
+
+### `education`
+- **Descrição**: Pasta que representa a seção ou página de "Educação" no projeto.
+- **Arquivos**:
+  - **`page.tsx`**: Arquivo que define o conteúdo e layout da página de educação. Esse arquivo serve como a entrada principal para a rota `/education`, onde é possível mostrar informações sobre a formação educacional, cursos ou qualificações.
+
+### `experience`
+- **Descrição**: Pasta que representa a seção ou página de "Experiência" no projeto.
+- **Arquivos**:
+  - **`page.tsx`**: Arquivo que define o conteúdo e layout da página de experiência. Ele serve como a entrada principal para a rota `/experience`, exibindo informações sobre a experiência profissional, projetos anteriores, ou outras atividades relevantes.
+
+### `resume`
+- **Descrição**: Pasta que representa a seção ou página de "Resumo" (ou currículo) no projeto.
+- **Arquivos**:
+  - **`page.tsx`**: Arquivo que define o conteúdo e layout da página de resumo ou currículo. Esse arquivo serve como a entrada principal para a rota `/resume`, onde pode ser mostrado um resumo das qualificações, habilidades e experiências de forma condensada.
+
+### Arquivos na Raiz de `src/app`
+
+- **`page.tsx`**: 
+  - **Função**: Esse é o arquivo que define a página principal da aplicação (geralmente a homepage ou a página de introdução). Ele serve como a entrada principal para a rota raiz `/` do projeto.
+
+- **`error.tsx`**: 
+  - **Função**: Arquivo que define a página de erro, exibida para o usuário em caso de problemas na navegação ou carregamento de conteúdo. É usado para lidar com erros de forma personalizada, proporcionando uma experiência amigável para o usuário.
+
+- **`layout.tsx`**: 
+  - **Função**: Define o layout padrão para as páginas da aplicação. Este arquivo controla o design e a estrutura comuns, como cabeçalhos, rodapés e barras de navegação, garantindo consistência visual em todas as páginas.
+
+- **`loading.tsx`**: 
+  - **Função**: Arquivo que define um componente de carregamento (loading). Este componente é exibido enquanto a página ou conteúdo está sendo carregado, proporcionando feedback visual ao usuário e melhorando a experiência de navegação.
+
+- **`not-found.tsx`**: 
+  - **Função**: Arquivo que define a página "Não Encontrado" (404), exibida quando o usuário tenta acessar uma rota inexistente. Esse arquivo fornece uma experiência amigável para informar que a página requisitada não foi encontrada.
+
+---
+
+Cada pasta dentro de `src/app` representa uma seção específica da aplicação, enquanto os arquivos na raiz do diretório controlam o layout geral, o comportamento de carregamento, erros e a homepage. Essa estrutura organizada permite que cada rota e funcionalidade tenha seu próprio espaço, facilitando a manutenção e a navegação no projeto.
