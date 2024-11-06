@@ -8,3 +8,4 @@ export { default as SocialMediaList } from './SocialMediaList';
 export { default as CertificateItem } from './CertificateItem';
 export { default as EducationItem } from './EducationItem';
 export { default as ExperienceItem } from './ExperienceItem';
+export { default as StackList } from './StackList';
