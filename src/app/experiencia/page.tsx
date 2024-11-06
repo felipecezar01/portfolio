@@ -7,15 +7,18 @@ const staticExperienceData = [
   {
     id: '1',
     attributes: {
-      title: 'Student Mentor',
-      description:
-        'Taught and supported students as a course mentor, facilitating their academic success.',
+      title: 'Mentor',
+      description:[
+        '• Eu era encarregado de receber os novatos e apresentar a área de tecnologia para eles.',
+        '• Dava aula de tirar dúvidas para os ingressantes, com contribuição mínima de 4 horas semanais.'
+      ],
       company: 'Unifametro',
       from: new Date('2024-01-20'),
       to: new Date('2024-12-20')
     }
   }
 ];
+
 
 const ExperiencePage = () => {
   return (

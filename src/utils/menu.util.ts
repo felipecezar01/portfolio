@@ -1,22 +1,22 @@
 export const menu = [
   {
-    title: 'projects',
-    path: '/'
+    title: 'Projetos',
+    path: '/' // Mantém como o caminho raiz
   },
   {
-    title: 'experience',
-    path: '/experience'
+    title: 'Experiência',
+    path: '/experiencia' // Sem acentos e em minúsculas
   },
   {
-    title: 'education',
-    path: '/education'
+    title: 'Educação',
+    path: '/educacao' // Sem acentos e em minúsculas
   },
   {
-    title: 'articles',
-    path: '/articles'
+    title: 'Artigos',
+    path: '/artigos' // Em minúsculas
   },
   {
-    title: 'resume',
-    path: '/resume'
+    title: 'Currículo',
+    path: '/curriculo' // Sem acentos e em minúsculas
   }
 ];

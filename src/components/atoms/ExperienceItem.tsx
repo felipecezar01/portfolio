@@ -14,18 +14,19 @@ const ExperienceItem = ({ data }: ExperienceItemProps) => {
       <div className="relative">
         <p className="font-display text-xs font-bold uppercase text-darken-700">
           {formattedDate(attributes.from)} -{' '}
-          {attributes.to ? formattedDate(attributes.to) : 'Present'}
+          {attributes.to ? formattedDate(attributes.to) : 'Presente'}
         </p>
       </div>
       <div className="mt-2">
         <h2 className="font-title">
-          {' '}
-          {/* Aplicando a classe `font-title` */}
           {attributes.title} @ {attributes.company}
         </h2>
-        <p className="mt-1 font-body font-light text-greyish-800 lg:w-3/4">
-          {attributes.description}
-        </p>
+        {/* Renderizando cada linha da descrição como um parágrafo separado */}
+        <div className="mt-1 font-body font-light text-greyish-800 lg:w-3/4">
+          {attributes.description.map((item, index) => (
+            <p key={index}>{item}</p>
+          ))}
+        </div>
       </div>
     </li>
   );
