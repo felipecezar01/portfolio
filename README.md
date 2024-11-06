@@ -141,3 +141,81 @@
 ---
 
 Cada pasta dentro de `src/app` representa uma seção específica da aplicação, enquanto os arquivos na raiz do diretório controlam o layout geral, o comportamento de carregamento, erros e a homepage. Essa estrutura organizada permite que cada rota e funcionalidade tenha seu próprio espaço, facilitando a manutenção e a navegação no projeto.
+
+# Estrutura do Diretório `src`
+
+## `components`
+
+### `atoms`
+- **Descrição**: Contém componentes básicos e independentes, que são os blocos fundamentais da interface do usuário (UI).
+  
+  - **`AbilitiesList.tsx`**: Componente que exibe uma lista de habilidades.
+  - **`Button.tsx`**: Componente de botão reutilizável, usado em várias partes do projeto.
+  - **`CertificateItem.tsx`**: Componente que representa um item de certificado, usado para listar certificações.
+  - **`EducationItem.tsx`**: Componente que exibe informações sobre uma formação educacional específica.
+  - **`ExperienceItem.tsx`**: Componente que representa uma experiência de trabalho ou projeto anterior.
+  - **`Loader.tsx`**: Componente de carregamento, exibido enquanto os dados ou conteúdo da página estão sendo carregados.
+  - **`MenuItem.tsx`**: Componente para exibir um item do menu de navegação.
+  - **`PageHeading.tsx`**: Componente de cabeçalho de página, usado para exibir títulos de seções ou páginas com estilo.
+  - **`PostItem.tsx`**: Componente que representa um item de postagem, usado para listar artigos ou posts.
+  - **`SocialMediaList.tsx`**: Componente que exibe uma lista de links para redes sociais.
+
+  - **`index.ts`**: Arquivo de exportação que facilita a importação dos componentes dentro da pasta `atoms` em outras partes do projeto.
+
+### `layouts`
+- **Descrição**: Contém componentes de layout que definem a estrutura de diferentes seções da aplicação.
+
+  - **`DefaultLayout.tsx`**: Layout padrão da aplicação, usado para envolver o conteúdo e definir a estrutura básica da página.
+  - **`SectionLayout.tsx`**: Layout específico para uma seção, utilizado para estruturar seções dentro de uma página.
+  - **`index.ts`**: Arquivo de exportação que facilita a importação dos componentes de layout.
+
+### `molecules`
+- **Descrição**: Contém componentes que são combinações de átomos, formando partes mais complexas da UI.
+
+  - **`Biography.tsx`**: Componente que exibe uma biografia ou descrição curta de uma pessoa.
+  - **`MenuList.tsx`**: Componente que exibe uma lista de itens de menu, usado na navegação.
+  - **`Navbar.tsx`**: Componente de barra de navegação, que inclui o menu e permite a navegação entre as páginas.
+
+  - **`index.ts`**: Arquivo de exportação que facilita a importação dos componentes na pasta `molecules`.
+
+### `organisms`
+- **Descrição**: Contém componentes maiores, compostos de átomos e moléculas, que representam seções inteiras da UI.
+
+  - **`index.ts`**: Arquivo de exportação que consolida componentes de organismo, facilitando a importação se novos organismos forem adicionados.
+
+## `interfaces`
+- **Descrição**: Define as interfaces TypeScript que especificam a estrutura de dados utilizados no projeto, proporcionando segurança de tipos.
+
+  - **`article.ts`**: Interface que define a estrutura de um artigo.
+  - **`education.ts`**: Interface que especifica os dados relacionados à formação educacional.
+  - **`experience.ts`**: Interface que representa a estrutura de uma experiência profissional ou projeto.
+  - **`image.ts`**: Interface que define os atributos de uma imagem usada no projeto.
+  - **`profile.ts`**: Interface que descreve os dados de perfil de um usuário ou autor.
+  - **`project.ts`**: Interface que especifica os dados de um projeto, incluindo informações como nome, descrição e URL.
+
+## `styles`
+- **Descrição**: Contém os arquivos de estilo global do projeto.
+
+  - **`globals.css`**: Arquivo CSS global que define os estilos aplicados em toda a aplicação, como fontes, cores e estilos base. Inclui definições para garantir uma aparência consistente entre os componentes.
+
+## `utils`
+- **Descrição**: Contém funções utilitárias e helpers que fornecem funcionalidades comuns para serem reutilizadas em várias partes do projeto.
+
+  - **`day.util.ts`**: Funções utilitárias para manipulação e formatação de datas.
+  - **`error.util.ts`**: Funções utilitárias para tratamento e formatação de erros.
+  - **`fonts.util.ts`**: Funções relacionadas ao gerenciamento e configuração de fontes usadas no projeto.
+  - **`image.util.ts`**: Funções utilitárias para manipulação de imagens, lidando com URLs de imagens ou otimizações.
+  - **`menu.util.ts`**: Funções utilitárias específicas para lidar com a navegação e estrutura de menus.
+  - **`random-color.util.ts`**: Função que gera cores aleatórias, usada para dar um toque dinâmico na interface.
+
+---
+
+### Resumo
+A estrutura `src` está organizada para maximizar a modularidade e reutilização. Cada pasta tem uma função específica:
+- **`components`** organiza a interface do usuário em átomos, moléculas e layouts.
+- **`interfaces`** define as estruturas de dados para garantir a segurança de tipo.
+- **`styles`** mantém a estilização centralizada.
+- **`utils`** oferece funcionalidades auxiliares reutilizáveis.
+
+Essa organização promove a clareza e facilita a manutenção e expansão do projeto.
+
