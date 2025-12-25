@@ -5,59 +5,59 @@ import { useRef, useEffect } from "react"
 import * as THREE from "three"
 
 function Drone() {
-  const { scene } = useGLTF("/models/drone.glb")
-  const droneRef = useRef<THREE.Group>(null)
-  
-  // Ref para armazenar a posição global do mouse
-  const mousePos = useRef({ x: 0, y: 0 })
+    const { scene } = useGLTF("/models/drone.glb")
+    const droneRef = useRef<THREE.Group>(null)
+    const mousePos = useRef({ x: 0, y: 0 })
 
-  useEffect(() => {
-    const handleMouseMove = (event: MouseEvent) => {
-      // Normaliza a posição do mouse para o intervalo [-1, 1] baseado na janela inteira
-      mousePos.current = {
-        x: (event.clientX / window.innerWidth) * 2 - 1,
-        y: -(event.clientY / window.innerHeight) * 2 + 1
-      }
-    }
+    useEffect(() => {
+        const handleMouseMove = (event: MouseEvent) => {
+            mousePos.current = {
+                x: (event.clientX / window.innerWidth) * 2 - 1,
+                y: -(event.clientY / window.innerHeight) * 2 + 1
+            }
+        }
+        window.addEventListener("mousemove", handleMouseMove)
+        return () => window.removeEventListener("mousemove", handleMouseMove)
+    }, [])
 
-    window.addEventListener("mousemove", handleMouseMove)
-    return () => window.removeEventListener("mousemove", handleMouseMove)
-  }, [])
+    useFrame(() => {
+        if (!droneRef.current) return
 
-  useFrame(() => {
-    if (!droneRef.current) return
-    
-    // O drone segue as coordenadas GLOBAIS capturadas no useEffect
-    const targetX = mousePos.current.x * 0.6
-    const targetY = mousePos.current.y * 0.3
+        const targetX = mousePos.current.x * 0.6
+        const targetY = mousePos.current.y * 0.3
+        const downwardOffset = 0.25;
 
-    droneRef.current.rotation.y = THREE.MathUtils.lerp(droneRef.current.rotation.y, targetX, 0.1)
-    droneRef.current.rotation.x = THREE.MathUtils.lerp(droneRef.current.rotation.x, -targetY, 0.1)
-  })
+        droneRef.current.rotation.y = THREE.MathUtils.lerp(droneRef.current.rotation.y, targetX, 0.1)
+        droneRef.current.rotation.x = THREE.MathUtils.lerp(
+            droneRef.current.rotation.x,
+            -targetY + downwardOffset,
+            0.1
+        )
+    })
 
-  return (
-    <Float speed={2} rotationIntensity={0.5} floatIntensity={0.5}>
-      <primitive 
-        ref={droneRef} 
-        object={scene} 
-        scale={12} 
-        position={[0, -0.2, 0]} 
-      />
-    </Float>
-  )
+    return (
+        <Float speed={2} rotationIntensity={0.5} floatIntensity={0.5}>
+            <primitive
+                ref={droneRef}
+                object={scene}
+                scale={8}             /* Reduzido de 9 para 8 */
+                position={[0, 2, 0]} /* Elevado de 1.8 para 2.2 */
+            />
+        </Float>
+    )
 }
 
 export default function Hero3D() {
-  return (
-    <div className="w-full h-full relative bg-[#16161a]">
-      <Canvas>
-        <PerspectiveCamera makeDefault position={[0, 0, 7]} />
-        <Environment files="/textures/shanghai.hdr" background blur={0.01} />
-        <ambientLight intensity={0.8} />
-        <pointLight position={[10, 10, 10]} intensity={1.5} color="#00f3ff" />
-        <Drone />
-      </Canvas>
-      <div className="absolute inset-0 bg-black/30 pointer-events-none" />
-    </div>
-  )
+    return (
+        <div className="w-full h-full relative">
+            <Canvas>
+                <PerspectiveCamera makeDefault position={[0, 0, 7]} />
+                <Environment files="/textures/shanghai.hdr" background blur={0.01} />
+                <ambientLight intensity={0.8} />
+                <pointLight position={[10, 10, 10]} intensity={1.5} color="#00f3ff" />
+                <Drone />
+            </Canvas>
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#16161a]/60 to-[#16161a] pointer-events-none" />
+        </div>
+    )
 }
