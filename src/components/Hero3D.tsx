@@ -40,8 +40,8 @@ function Drone() {
             <primitive
                 ref={droneRef}
                 object={scene}
-                scale={8}             /* Reduzido de 9 para 8 */
-                position={[0, 2, 0]} /* Elevado de 1.8 para 2.2 */
+                scale={12}             /* Mantido conforme seu ajuste */
+                position={[0, 1, 0]}   /* Mantido conforme seu ajuste */
             />
         </Float>
     )
@@ -57,7 +57,6 @@ export default function Hero3D() {
                 <pointLight position={[10, 10, 10]} intensity={1.5} color="#00f3ff" />
                 <Drone />
             </Canvas>
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#16161a]/60 to-[#16161a] pointer-events-none" />
         </div>
     )
 }
