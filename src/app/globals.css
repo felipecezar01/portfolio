@@ -1,26 +1,27 @@
 @import "tailwindcss";
 
+@theme {
+  /* Definindo o preto puro e as cores neon para o projeto */
+  --color-background: #000000;
+  --color-foreground: #ffffff;
+  --color-cyber-cyan: #00f3ff;
+  --color-cyber-green: #39ff14;
+
+  /* Efeito de brilho neon que vamos usar nos textos/botões */
+  --shadow-neon-cyan: 0 0 5px #00f3ff, 0 0 20px #00f3ff;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #000000;
+  --foreground: #ffffff;
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  /* Fonte limpa para manter o aspecto "Clean" */
+  font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
 }
