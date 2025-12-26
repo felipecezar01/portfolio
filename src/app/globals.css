@@ -5,7 +5,6 @@
   --color-box-bg: #1e1e24;
   --color-cyber-cyan: #00f3ff;
   --color-cyber-green: #39ff14;
-  
   --shadow-neon-cyan: 0 0 5px #00f3ff, 0 0 20px #00f3ff;
 }
 
@@ -19,4 +18,41 @@ body {
   color: var(--foreground);
   margin: 0;
   padding: 0;
+}
+
+/* --- ANIMAÇÕES E SCROLLBAR (Movido do page.tsx para corrigir erro) --- */
+
+@keyframes growHeight {
+  from { height: 0; }
+  to { height: 100%; }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Barra de Rolagem Customizada */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  transition: background 0.3s;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 243, 255, 0.3);
+}
+
+/* Suporte Firefox */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.1) transparent;
 }
