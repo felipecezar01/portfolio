@@ -8,6 +8,15 @@ export default function Home() {
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
 
   const projects = [
+    {
+      id: 7,
+      year: "2025",
+      title: "07 - PERSONAL FINANCE TRACKER",
+      description: "An offline-first mobile financial manager tailored for privacy and speed. Features Hive NoSQL for secure local storage and FL Chart for data visualization.",
+      image: "/projects/pro7.png",
+      tags: ["FLUTTER", "DART", "HIVE NOSQL", "FL CHART"],
+      link: "https://github.com/felipecezar01/finantials"
+    },
     { id: 6, year: "2024", title: "06 - AWS CLOUD CALCULATOR", description: "A serverless application deployed on AWS EC2, focusing on cloud infrastructure management and server configuration for high-availability web services.", image: "/projects/pro6.png", tags: ["PYTHON", "AWS EC2", "SERVER CONFIG"], link: "https://github.com/felipecezar01/back-cloud-calculator" },
     { id: 5, year: "2024", title: "05 - RESTFUL CAR DEALERSHIP API", description: "Enterprise-grade API engineered with Java and Spring Framework. Implements a clean layered architecture and the MVC design pattern with full JWT security.", image: "/projects/pro5.png", tags: ["JAVA", "SPRING", "JWT", "SWAGGER"], link: "https://github.com/felipecezar01/back-API-cars" },
     { id: 4, year: "2024", title: "04 - IMMERSIVE ZOMBIE SURVIVAL", description: "A complex survival horror game developed in Unity. Features optimized 2D physics, AI pathfinding, and seamless web deployment via SIMMER.io.", image: "/projects/pro4.png", tags: ["UNITY", "C#", "SIMMER.IO", "VS CODE"], link: "https://www.linkedin.com/feed/update/urn:li:activity:7201312706274988033/" },
@@ -128,12 +137,10 @@ export default function Home() {
                     <div key={idx} className="min-w-full h-full grid grid-cols-2 gap-6 p-6">
                       {chunk.map((project) => (
                         <a key={project.id} href={project.link} target="_blank" rel="noopener noreferrer" className="flex flex-col h-full border border-white/5 rounded-xl overflow-hidden bg-gray-800/20 group/card hover:border-cyber-cyan/50 hover:scale-[1.02] hover:shadow-[0_0_30px_rgba(0,243,255,0.15)] transition-all duration-500 cursor-pointer">
-                          {/* Imagem MANTIDA em 16:9 (aspect-video) */}
                           <div className="aspect-video relative shrink-0 border-b border-white/5 bg-gray-900">
                             <Image src={project.image} alt={project.title} fill className="object-cover group-hover/card:scale-105 transition-transform duration-700" />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-40"></div>
                           </div>
-                          {/* Ajuste: Padding reduzido para p-4 e line-clamp-2 na descrição para caber as tags */}
                           <div className="p-4 flex flex-col flex-1 justify-between">
                             <div>
                               <span className="text-sm font-mono text-gray-500 uppercase tracking-widest mb-1 block font-bold">{project.year}</span>
@@ -214,12 +221,10 @@ export default function Home() {
                       <h3 className={`${cat.headerColor} font-black text-xl tracking-[0.2em] uppercase border-b border-white/10 pb-4`}>
                         {cat.title}
                       </h3>
-                      {/* Grid ESPAÇADO original (gap-3) */}
                       <div className="grid grid-cols-2 gap-3">
                         {cat.skills.map((skill, i) => (
                           <div
                             key={skill.name}
-                            // Padding ESPAÇADO original (px-4 py-3)
                             className={`opacity-0 animate-[fadeInUp_0.5s_ease-out_forwards] flex flex-row items-center gap-4 px-4 py-3 bg-[#1e1e24]/60 border ${cat.borderColor} rounded-lg hover:shadow-[0_0_20px_${cat.glowColor}] transition-all duration-300 group cursor-default`}
                             style={{ animationDelay: `${200 + (catIdx * 200) + (i * 50)}ms` }}
                           >
@@ -228,7 +233,6 @@ export default function Home() {
                               alt={skill.name}
                               className="w-6 h-6 object-contain group-hover:scale-110 transition-transform duration-300"
                             />
-                            {/* Fonte ORIGINAL (text-[11px] e truncate) */}
                             <span className="text-[11px] font-black text-gray-300 group-hover:text-white uppercase tracking-widest truncate">
                               {skill.name}
                             </span>
@@ -267,7 +271,11 @@ export default function Home() {
         <span className="text-[8px] font-mono text-gray-500 tracking-[0.2em] uppercase">
           Built by <span className="text-gray-300 font-bold">Felipe Cezar</span> // Coworker: <span className="text-gray-300 font-bold">Gemini 3 Pro</span>
         </span>
-        <img src="https://cdn.simpleicons.org/googlegemini/9ca3af" alt="Gemini Icon" className="h-3 w-3 opacity-60" />
+        <img
+          src="https://cdn.simpleicons.org/googlegemini/9ca3af"
+          alt="Gemini Icon"
+          className="h-3 w-3 opacity-60"
+        />
       </footer>
     </div>
   );
